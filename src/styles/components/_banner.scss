@@ -1,0 +1,30 @@
+.banner {
+  height: 223px;
+  margin: 0 100px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../../assets/img/banner1.svg) center/cover;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: $color-2;
+  }
+}
+
+@media screen and (max-width: 895px) {
+  .banner {
+    height: 111px;
+    margin: 0 20px 0;
+    border-radius: 10px;
+    justify-content: left;
+
+    h1 {
+      font-size: 1.5rem;
+      margin: 0 102px 0 16px;
+    }
+  }
+}

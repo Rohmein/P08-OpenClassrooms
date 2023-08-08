@@ -3,6 +3,18 @@
   src: url(../assets/fonts/Montserrat-Regular.ttf);
 }
 
+$color-1: #ff6060;
+$color-2: #ffffff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   font-family: "Montserrat", sans-serif;
 }
