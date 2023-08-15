@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
+import homeBanner from "../assets/img/banner1.png";
+import aboutBanner from "../assets/img/banner2.png";
 
 const Banner = () => {
   const location = useLocation();
@@ -7,9 +9,9 @@ const Banner = () => {
 
   const getImageForPage = (pathname) => {
     if (pathname === "/") {
-      return "./banner1.png";
+      return homeBanner;
     } else if (pathname === "/about") {
-      return "./banner2.png";
+      return aboutBanner;
     }
   };
 
@@ -24,7 +26,7 @@ const Banner = () => {
         {location.pathname === "/" ? "Chez vous, partout et ailleurs" : ""}
       </h1>
       <div className="banner-gradient"></div>
-      <img src={`./${bannerImage}`} alt="Banner" />
+      <img src={`${bannerImage}`} alt="Banner" />
     </div>
   );
 };

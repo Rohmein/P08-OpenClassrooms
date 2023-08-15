@@ -1,0 +1,11 @@
+.main-container {
+  margin: 43px 100px 50px;
+  padding: 56px 50px 43px;
+  background: $color-3;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 50px;
+  column-gap: 60px;
+}
