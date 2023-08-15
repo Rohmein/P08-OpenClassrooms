@@ -39,8 +39,15 @@
   .banner {
     height: 111px;
     margin: 0 20px 0;
-    border-radius: 10px;
     justify-content: left;
+
+    .banner-gradient {
+      border-radius: 10px;
+    }
+
+    img {
+      border-radius: 10px;
+    }
 
     h1 {
       font-size: 1.5rem;
