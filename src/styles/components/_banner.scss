@@ -1,10 +1,17 @@
 .banner {
   position: relative;
-  height: 223px;
   margin: 0 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .home-banner {
+    height: 223px;
+  }
+
+  .about-banner {
+    height: 223px;
+  }
 
   .banner-gradient {
     content: "";
@@ -37,9 +44,12 @@
 
 @media screen and (max-width: 895px) {
   .banner {
-    height: 111px;
     margin: 0 20px 0;
     justify-content: left;
+
+    .home-banner {
+      height: 111px;
+    }
 
     .banner-gradient {
       border-radius: 10px;
