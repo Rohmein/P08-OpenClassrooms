@@ -1,0 +1,92 @@
+.carousel {
+  margin: 50px 100px 30px;
+
+  .carousel-banner {
+    position: relative;
+    height: 415px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-1;
+    border-radius: 25px;
+
+    .arrow {
+      position: absolute;
+    }
+
+    .arrow-left {
+      left: 23px;
+    }
+
+    .arrow-right {
+      right: 23px;
+    }
+
+    .number {
+      position: absolute;
+      color: $color-2;
+      bottom: 25px;
+    }
+  }
+
+  .description-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  h1,
+  h2,
+  p {
+    color: $color-1;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    width: 130px;
+    font-size: 18px;
+    text-align: end;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .proprietaire-container {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+  }
+
+  .proprietaire {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .photo-proprietaire {
+    height: 64px;
+    width: 64px;
+    background: #c4c4c4;
+    border-radius: 50%;
+  }
+
+  .tag {
+    width: 115px;
+    margin-top: 20px;
+    padding: 3px 0 2px;
+    text-align: center;
+    background: $color-1;
+    border-radius: 10px;
+    color: $color-2;
+  }
+
+  .stars {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+}
