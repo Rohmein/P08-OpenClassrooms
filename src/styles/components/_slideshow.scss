@@ -7,8 +7,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $color-1;
     border-radius: 25px;
+
+    .carousel-picture {
+      height: 100%;
+      width: 100%;
+      border-radius: 25px;
+      object-fit: cover;
+    }
 
     .arrow {
       position: absolute;
@@ -24,64 +30,72 @@
 
     .number {
       position: absolute;
-      color: $color-2;
       bottom: 25px;
+      font-size: 18px;
+      color: $color-2;
     }
   }
+}
 
-  .description-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-  }
+.description-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 100px;
 
-  h1,
-  h2,
-  p {
+  .description {
     color: $color-1;
-  }
 
-  h1 {
-    font-size: 36px;
-  }
+    h1 {
+      font-size: 36px;
+    }
 
-  h2 {
-    width: 130px;
-    font-size: 18px;
-    text-align: end;
-  }
+    h2 {
+      width: 130px;
+      font-size: 18px;
+      text-align: end;
+    }
 
-  p {
-    font-size: 18px;
-  }
+    p {
+      font-size: 18px;
+    }
 
-  .proprietaire-container {
-    display: flex;
-    flex-direction: column;
-    gap: 21px;
+    .tag-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    .tag {
+      margin-top: 20px;
+      padding: 3px 30px 2px;
+      text-align: center;
+      font-size: 14px;
+      background: $color-1;
+      border-radius: 10px;
+      color: $color-2;
+    }
   }
+}
+
+.proprietaire-container {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
 
   .proprietaire {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: $color-1;
+  }
+
+  h2 {
+    font-size: 18px;
   }
 
   .photo-proprietaire {
     height: 64px;
     width: 64px;
-    background: #c4c4c4;
     border-radius: 50%;
-  }
-
-  .tag {
-    width: 115px;
-    margin-top: 20px;
-    padding: 3px 0 2px;
-    text-align: center;
-    background: $color-1;
-    border-radius: 10px;
-    color: $color-2;
   }
 
   .stars {

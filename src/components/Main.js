@@ -1,27 +1,26 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { fetchData } from "./API";
 import Card from "./Card";
 
 const Main = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-      const response = await fetch("./logements.json");
-      if (response.ok) {
-        const jsonData = await response.json();
-        setData(jsonData);
-      } else {
-        console.error("Erreur lors de la requête.");
-      }
-    }
-    fetchData();
+    fetchData()
+      .then((data) => setData(data))
+      .catch((error) =>
+        console.error("Erreur de récupération des éléments", error)
+      );
   }, []);
 
   return (
     <div className="main-container">
       <ul>
         {data.map((logement) => (
-          <Card key={logement.id} logement={logement} />
+          <NavLink key={logement.id} to={`slideshow/${logement.id}`}>
+            <Card logement={logement} />
+          </NavLink>
         ))}
       </ul>
     </div>
