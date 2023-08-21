@@ -2,8 +2,10 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Logements from "../database/logements.json";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Slider from "../components/Slider";
+import Rating from "../components/Rating";
+import SlideshowCollapse from "../components/SlideshowCollapse";
+import Footer from "../components/Footer";
 
 const Slideshow = () => {
   const { id } = useParams();
@@ -35,7 +37,20 @@ const Slideshow = () => {
               alt={selectedHouse.host.name}
             />
           </div>
+          <Rating value={selectedHouse.rating} />
         </div>
+      </div>
+      <div className="slideshow-collapse">
+        <SlideshowCollapse title="Description">
+          <p>{selectedHouse.description}</p>
+        </SlideshowCollapse>
+        <SlideshowCollapse title="Équipements">
+          {selectedHouse.equipments.map((equipment, index) => (
+            <p key={index} className="equipment">
+              {equipment}
+            </p>
+          ))}
+        </SlideshowCollapse>
       </div>
       <Footer />
     </div>
