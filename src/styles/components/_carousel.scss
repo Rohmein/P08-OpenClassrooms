@@ -1,0 +1,44 @@
+.carousel {
+  margin: 50px 100px 30px;
+
+  .carousel-banner {
+    position: relative;
+    height: 415px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+
+    .carousel-picture {
+      height: 100%;
+      width: 100%;
+      border-radius: 25px;
+      object-fit: cover;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .arrow {
+      position: absolute;
+      cursor: pointer;
+      transition: transform 200ms ease-in-out;
+    }
+    .arrow:hover {
+      transform: scale(1.1);
+    }
+
+    .arrow-left {
+      left: 23px;
+    }
+
+    .arrow-right {
+      right: 23px;
+    }
+
+    .carousel-numbers {
+      position: absolute;
+      bottom: 25px;
+      font-size: 18px;
+      color: $color-2;
+    }
+  }
+}
