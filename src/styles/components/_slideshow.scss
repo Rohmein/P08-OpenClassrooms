@@ -62,3 +62,48 @@
     margin-left: 15px;
   }
 }
+
+@media screen and (max-width: 895px) {
+  .description-container {
+    margin: 0 20px 13.5px;
+    flex-direction: column;
+
+    .proprietaire-container {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16.5px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .description-container {
+    .description {
+      h1 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .tag {
+        font-size: 10px;
+      }
+    }
+
+    h2 {
+      text-align: end;
+      width: 50px;
+      font-size: 12px;
+    }
+  }
+
+  .proprietaire-container {
+    .star {
+      margin-left: 10px;
+      width: 18px;
+    }
+  }
+}

@@ -42,3 +42,17 @@
     }
   }
 }
+
+@media screen and (max-width: 895px) {
+  .carousel {
+    margin: 0 20px 15px;
+
+    .carousel-numbers {
+      display: none;
+    }
+
+    .arrow {
+      width: 19px;
+    }
+  }
+}
