@@ -33,7 +33,13 @@ const SlideshowCollapse = ({ title, children }) => {
           />
         </div>
       </div>
-      {isOpen && <div className="slideshow-collapse-content">{children}</div>}
+      <div
+        className={`slideshow-collapse-content ${
+          isOpen ? "slideshow-collapse-open" : ""
+        }`}
+      >
+        {children}
+      </div>
     </div>
   );
 };

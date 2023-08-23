@@ -42,14 +42,16 @@ const Slideshow = () => {
       </div>
       <div className="slideshow-collapse">
         <SlideshowCollapse title="Description">
-          <p>{selectedHouse.description}</p>
+          <div className="description">
+            <p>{selectedHouse.description}</p>
+          </div>
         </SlideshowCollapse>
         <SlideshowCollapse title="Équipements">
-          {selectedHouse.equipments.map((equipment, index) => (
-            <p key={index} className="equipment">
-              {equipment}
-            </p>
-          ))}
+          <div className="equipments">
+            {selectedHouse.equipments.map((equipment, index) => (
+              <p key={index}>{equipment}</p>
+            ))}
+          </div>
         </SlideshowCollapse>
       </div>
       <Footer />
