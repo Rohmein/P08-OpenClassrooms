@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Arrow from "../assets/img/arrow.png";
+import Arrow from "../../assets/img/arrow.png";
 
-const Collapse = ({ title, children }) => {
+const SlideshowCollapse = ({ title, children }) => {
   const [rotateArrow, setRotateArrow] = useState(0);
   const maxRotation = -180;
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +21,8 @@ const Collapse = ({ title, children }) => {
   };
 
   return (
-    <div className="collapse">
-      <div className="collapse-header">
+    <div className="slideshow-collapse-container">
+      <div className="slideshow-collapse-header">
         <h1>{title}</h1>
         <div onClick={toggleCollapse}>
           <img
@@ -33,11 +33,15 @@ const Collapse = ({ title, children }) => {
           />
         </div>
       </div>
-      <div className={`collapse-content ${isOpen ? "collapse-open" : ""}`}>
+      <div
+        className={`slideshow-collapse-content ${
+          isOpen ? "slideshow-collapse-open" : ""
+        }`}
+      >
         {children}
       </div>
     </div>
   );
 };
 
-export default Collapse;
+export default SlideshowCollapse;

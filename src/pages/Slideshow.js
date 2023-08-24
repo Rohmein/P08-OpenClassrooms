@@ -1,15 +1,20 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Logements from "../database/logements.json";
-import Header from "../components/Header";
-import Slider from "../components/Slider";
-import Rating from "../components/Rating";
-import SlideshowCollapse from "../components/SlideshowCollapse";
-import Footer from "../components/Footer";
+import Header from "./components/Header";
+import Slider from "./components/Slider";
+import Rating from "./components/Rating";
+import SlideshowCollapse from "./components/SlideshowCollapse";
+import Footer from "./components/Footer";
+import Error from "./Error";
 
-const Slideshow = () => {
+const Slideshow = (Logements) => {
   const { id } = useParams();
-  const selectedHouse = Logements.find((logement) => logement.id === id);
+
+  const logements = Logements.Logements;
+  const selectedHouse = logements.find((logement) => logement.id === id);
+  if (!selectedHouse) {
+    return <Error />;
+  }
   const slides = selectedHouse.pictures;
 
   return (

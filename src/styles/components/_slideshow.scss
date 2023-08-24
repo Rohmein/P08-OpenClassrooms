@@ -17,11 +17,11 @@
 
     .tag-container {
       display: flex;
+      margin-top: 20px;
       gap: 10px;
     }
 
     .tag {
-      margin-top: 20px;
       padding: 3px 30px 2px;
       text-align: center;
       font-size: 14px;
@@ -63,6 +63,15 @@
   }
 }
 
+@media screen and (max-width: 1080px) {
+  .proprietaire-container {
+    .star {
+      margin-left: 10px;
+      width: 18px;
+    }
+  }
+}
+
 @media screen and (max-width: 895px) {
   .description-container {
     margin: 0 20px 13.5px;
@@ -86,6 +95,10 @@
 
       p {
         font-size: 14px;
+      }
+
+      .tag-container {
+        flex-wrap: wrap;
       }
 
       .tag {

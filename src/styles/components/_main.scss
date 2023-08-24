@@ -1,13 +1,16 @@
-.main-container ul {
+.main-container {
   margin: 43px 100px 50px;
   padding: 56px 50px 43px;
   background: $color-3;
   border-radius: 25px;
-  display: flex;
-  justify-content: left;
-  flex-wrap: wrap;
-  row-gap: 50px;
-  column-gap: 60px;
+
+  ul {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 60px;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -15,12 +18,25 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 1040px) {
+  .main-container {
+    ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
 @media screen and (max-width: 895px) {
-  .main-container ul {
-    margin: 22px 0 27px;
+  .main-container {
+    background: none;
+    margin: 22px 20px 27px;
     padding: 0;
-    row-gap: 20px;
-    column-gap: 0px;
-    background: $color-2;
+
+    ul {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 }

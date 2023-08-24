@@ -1,7 +1,7 @@
 .card {
   position: relative;
   height: 340px;
-  max-width: 340px;
+  width: 340px;
   border-radius: 10px;
 
   img {
@@ -40,19 +40,8 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1040px) {
   .card {
-    max-width: 255px;
-    max-height: 255px;
-
-    // img {
-    //   margin-bottom: -4px;
-    // }
-  }
-}
-
-@media screen and (max-width: 895px) {
-  .card {
-    margin: 0 20px 0;
+    width: 100%;
   }
 }

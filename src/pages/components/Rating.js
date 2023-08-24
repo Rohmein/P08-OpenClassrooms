@@ -1,6 +1,6 @@
 import React from "react";
-import EmptyStar from "../assets/img/star.png";
-import FullStar from "../assets/img/active-star.png";
+import EmptyStar from "../../assets/img/star.png";
+import FullStar from "../../assets/img/active-star.png";
 
 const Rating = ({ value }) => {
   const stars = [];

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ArrowLeft from "../assets/img/arrow-left.png";
-import ArrowRight from "../assets/img/arrow-right.png";
+import ArrowLeft from "../../assets/img/arrow-left.png";
+import ArrowRight from "../../assets/img/arrow-right.png";
 
 const Slider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
