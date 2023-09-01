@@ -17,6 +17,7 @@
 
     .tag-container {
       display: flex;
+      flex-wrap: wrap;
       margin-top: 20px;
       gap: 10px;
     }
@@ -63,7 +64,15 @@
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1100px) {
+  .description-container {
+    .description {
+      .tag {
+        padding: 3px 20px 2px;
+      }
+    }
+  }
+
   .proprietaire-container {
     .star {
       margin-left: 10px;
@@ -76,6 +85,12 @@
   .description-container {
     margin: 0 20px 13.5px;
     flex-direction: column;
+    .description {
+      .tag {
+        font-size: 10px;
+        padding: 3px 30px 2px;
+      }
+    }
 
     .proprietaire-container {
       flex-direction: row-reverse;

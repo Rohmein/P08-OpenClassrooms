@@ -25,18 +25,22 @@ const Slider = ({ slides }) => {
           src={slides[currentIndex]}
           alt={`Slide n°${currentIndex}`}
         />
-        <img
-          className="arrow arrow-left"
-          src={ArrowLeft}
-          alt="Flèche gauche du carousel"
-          onClick={goToPrevious}
-        />
-        <img
-          className="arrow arrow-right"
-          src={ArrowRight}
-          alt="Flèche droite du carousel"
-          onClick={goToNext}
-        />
+        {slides.length > 1 && (
+          <img
+            className="arrow arrow-left"
+            src={ArrowLeft}
+            alt="Flèche gauche du carousel"
+            onClick={goToPrevious}
+          />
+        )}
+        {slides.length > 1 && (
+          <img
+            className="arrow arrow-right"
+            src={ArrowRight}
+            alt="Flèche droite du carousel"
+            onClick={goToNext}
+          />
+        )}
         {slides.length > 1 && (
           <div className="carousel-numbers">
             {currentIndex + 1} / {slides.length}
