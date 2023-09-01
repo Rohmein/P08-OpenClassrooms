@@ -15,7 +15,7 @@ const App = () => {
           path="/slideshow/:id"
           element={<Slideshow Logements={Logements} />}
         />
-        <Route path="/not-found" element={<Error />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Arrow from "../../assets/img/arrow.png";
 
-const Collapse = ({ title, children }) => {
+const AboutCollapse = ({ title, children }) => {
   const [rotateArrow, setRotateArrow] = useState(0);
   const maxRotation = -180;
   const [isOpen, setIsOpen] = useState(false);
@@ -40,4 +40,4 @@ const Collapse = ({ title, children }) => {
   );
 };
 
-export default Collapse;
+export default AboutCollapse;
